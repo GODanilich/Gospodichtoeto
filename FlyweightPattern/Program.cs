@@ -6,15 +6,15 @@ int n = 10000000;
  FlyweightFactory flyweightFactory = new FlyweightFactory();
 
 List<UnsharedProcessor> unsharedProcessors = new List<UnsharedProcessor>();
-
+/*
 for (int i = 0; i < n/2; i++)
 {
     unsharedProcessors.Add(new UnsharedProcessor((int)Entity.Intel, i.ToString(), "2024"));
     unsharedProcessors.Add(new UnsharedProcessor((int)Entity.AMD, i.ToString(), "2024"));
 } 
+*/
 
-
-/*WithoutFlyweight without = new WithoutFlyweight((int)Entity.Intel, 1.ToString(), "2024", 5000, 8, 16, "intel", "LGA1700", "DDR4");
+WithoutFlyweight without = new WithoutFlyweight((int)Entity.Intel, 1.ToString(), "2024", 5000, 8, 16, "intel", "LGA1700", "DDR4");
 
 List<WithoutFlyweight> list = new List<WithoutFlyweight>();
 
@@ -22,9 +22,9 @@ WithoutFlyweight[] m1 = new WithoutFlyweight[n];
 
 for (int i = 0; i < n; i++)
 {
-    list.Add(new WithoutFlyweight((int)Entity.Intel, 1.ToString(), "2024",  5000, 8, 16, "intel", "LGA1700", "DDR4"));
+    list.Add(new WithoutFlyweight((int)Entity.Intel+i, i.ToString(), $"2024{i}",  5000+i, 8+i, 16 + i, $"intel{i}", $"LGA1700{i}", $"DDR4{i}"));
 }
-*/
+
 
 
 UnsharedProcessor intel = new UnsharedProcessor((int)Entity.Intel, 1.ToString(), "2024");
