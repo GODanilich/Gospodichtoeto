@@ -8,11 +8,11 @@ namespace FlyweightPattern
 {
     public class UnsharedProcessor
     {   
-        public string ModelName { get; private set; }
+        public int ModelName { get; private set; }
         public string SN {  get; private set; }
         public string ManufacturedIn { get; private set; }
 
-        public UnsharedProcessor(string modelName, string sN, string manufacturedIn)
+        public UnsharedProcessor(int modelName, string sN, string manufacturedIn)
         {
             ModelName = modelName;
             SN = sN;

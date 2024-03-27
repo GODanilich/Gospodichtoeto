@@ -8,7 +8,7 @@ namespace FlyweightPattern
 {
     public class WithoutFlyweight
     {
-        public string ModelName { get; private set; }
+        public int ModelName { get; private set; }
         public string SN { get; private set; }
         public string ManufacturedIn { get; private set; }
         public int ClockSpeed { get; private set; }
@@ -23,7 +23,7 @@ namespace FlyweightPattern
         public string DDRType { get; private set; }
 
 
-        public WithoutFlyweight(string modelName, string sN, string manufacturedIn, int clockSpeed, int coreCount, int threadCount, string manufacturer, string platform, string dDRType)
+        public WithoutFlyweight(int modelName, string sN, string manufacturedIn, int clockSpeed, int coreCount, int threadCount, string manufacturer, string platform, string dDRType)
         {
             ModelName = modelName;
             SN = sN;
